@@ -25,12 +25,12 @@ def list_users_for_humans():
 def new_user():
     return render_template("new_user.html")
 
-@twitter_routes.route("/users/create", methods=["POST"])
+@twitter_routes.route("/user/create", methods=["POST"])
 def create_user():
     print("FORM DATA:", dict(request.form))
-
-    user_new = User(title=request.form["user_name"])
-    db.session.add(user_new)
+    # todo: store in database
+    new_user = User(user=request.form["user_name"])
+    db.session.add(new_user)
     db.session.commit()
 
     return redirect("/users")
