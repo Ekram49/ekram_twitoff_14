@@ -40,6 +40,6 @@ class Tweet(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     tweet = db.Column(db.String(140))  
 
-class User(db.Model):
+class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    user =  db.Column(db.String(50))
+    users =  db.Column(db.String(50))
