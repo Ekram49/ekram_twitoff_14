@@ -13,7 +13,8 @@ def get_user(screen_name=None):
     print(screen_name)
 
     twitter_user = twitter_api.get_user(screen_name)
-    statuses = twitter_api.user_timeline(screen_name, tweet_mode="extended", count=150, exclude_replies=True, include_rts=False)
+    #statuses = twitter_api.user_timeline(screen_name, tweet_mode="extended", count=150, exclude_replies=True, include_rts=False)
+    statuses = twitter_api.user_timeline(screen_name, tweet_mode="extended", count=150)
     #return jsonify({
     #    "user": user._json,
     #    "tweets": [status.full_text for status in statuses]
