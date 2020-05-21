@@ -12,8 +12,9 @@ from web_app.routes.stats_routes import stats_routes
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL") # using relative filepath
+#DATABASE_URI = "sqlite:///ekram_twitoff_14.db" # using relative filepath
 #DATABASE_URI = "sqlite:////Users/Username/Desktop/your-repo-name/web_app_99.db" # using absolute filepath on Mac (recommended)
+DATABASE_URL = os.getenv("DATABASE_URL")
 #DATABASE_URI = "sqlite:///C:\\Users\\Username\\Desktop\\your-repo-name\\web_app_99.db" # using absolute filepath on Windows (recommended) h/t: https://stackoverflow.com/a/19262231/670433
 
 def create_app():
