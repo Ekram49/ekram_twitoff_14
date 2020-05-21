@@ -12,6 +12,8 @@ requests = "*"
 basilica = "*"
 tweepy = "*"
 scikit-learn = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
